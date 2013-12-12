@@ -1,6 +1,6 @@
 //
 //  KHView.h
-//  blackcard
+//  KHTools
 //
 //  Created by Kosuke Hata on 9/17/13.
 //  Copyright (c) 2013 topiary. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  TPConstants.h
-//  kosuke hata
+//  KHTools
 //
 
 // default macros
