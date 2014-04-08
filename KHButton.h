@@ -3,7 +3,7 @@
 //  KHTools
 //
 //  Created by Kosuke Hata on 7/6/13.
-//  Copyright (c) 2013 topiary. All rights reserved.
+//  Copyright (c) 2013 Animal Robo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,10 +15,12 @@ typedef enum {
     kKHButtonTypeMenu,
     kKHButtonTypeLocation,
     kKHButtonTypeBack,
+    kKHButtonTypeNext,
     kKHButtonTypeCancel,
     kKHButtonTypeLogin,
     kKHButtonTypeLogout,
     kKHButtonTypeSignup,
+    kKHButtonTypeFacebookButton,
 } KHButtonType;
 
 @class KHButton;
@@ -44,8 +46,8 @@ typedef enum {
 @property (nonatomic) BOOL makeSound;
 
 
-// for returning quick back buttons
-+ (KHButton *)buttonType:(KHButtonType)type withSize:(CGSize)size;
++ (KHButton *)buttonWithColor:(UIColor *)color withSize:(CGSize)size andTitle:(NSString *)title;
++ (KHButton *)buttonWithSize:(CGSize)size andImage:(UIImage *)image;
 
 // initialization methods
 - (id)initWithButtonSize:(CGSize)size

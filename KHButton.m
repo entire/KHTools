@@ -3,7 +3,7 @@
 //  KHTools
 //
 //  Created by Kosuke Hata on 7/6/13.
-//  Copyright (c) 2013 topiary. All rights reserved.
+//  Copyright (c) 2013 Animal Robo. All rights reserved.
 //
 
 #import "KHButton.h"
@@ -26,26 +26,16 @@
 @synthesize button = _button;
 @synthesize makeSound = _makeSound;
 
-+ (KHButton *)buttonType:(KHButtonType)type withSize:(CGSize)size {
-    
-    KHButton *button;
-    
-    if (type == kKHButtonBack) {
-        
-        UIColor *backColor = [UIColor colorWithRed:0.55f green:0.55f blue:0.5f alpha:1.0f];
-        KHButton *backButton = [[KHButton alloc] initWithButtonSize:size withColor:backColor withTitle:@"☜"];
-        backButton.button.titleLabel.font = [UIFont fontWithName:@"TitilliumText25L-400wt" size:(size.height)/1.4];
-        button = backButton;
-        
-    } else if (type == kKHButtonNormal) {
-        
-        UIColor *normalColor = [UIColor colorWithRed:0.55f green:0.55f blue:0.5f alpha:1.0f];
-        KHButton *normalButton = [[KHButton alloc] initWithButtonSize:size withColor:normalColor withTitle:@"☜"];
-        normalButton.button.titleLabel.font = [UIFont fontWithName:@"TitilliumText25L-400wt" size:(size.height)/1.4f];
-        button = normalButton;
++ (KHButton *)buttonWithColor:(UIColor *)color withSize:(CGSize)size andTitle:(NSString *)title
+{
+    KHButton *button = [[KHButton alloc] initWithButtonSize:size withColor:color withTitle:title];
+    return button;
+}
 
-    }
-    
++ (KHButton *)buttonWithSize:(CGSize)size andImage:(UIImage *)image
+{
+    KHButton *button = [[KHButton alloc] initWithButtonSizeForImage:size];
+    [button setButtonImage:image];
     return button;
 }
 
