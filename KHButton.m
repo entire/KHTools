@@ -154,6 +154,11 @@
     self.button.clipsToBounds = YES;
 }
 
+- (UIImage *)getButtonImage
+{
+    return buttonImage;
+}
+
 - (void)changeSizeTo:(CGSize)size {
     
     buttonSize = size;

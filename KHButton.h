@@ -16,10 +16,15 @@ typedef enum {
     kKHButtonTypeLocation,
     kKHButtonTypeBack,
     kKHButtonTypeNext,
+    kKHButtonTypeYes,
+    kKHButtonTypeNo,
+    kKHBUttonTypePassword,
     kKHButtonTypeCancel,
+    kKHBUttonTypeDone,
     kKHButtonTypeLogin,
     kKHButtonTypeLogout,
     kKHButtonTypeSignup,
+    kKHButtonTypeHelp,
     kKHButtonTypeFacebookButton,
 } KHButtonType;
 
@@ -63,6 +68,9 @@ typedef enum {
 - (void)setButtonImage:(UIImage *)image;
 - (void)setButtonTitle:(NSString *)title;
 - (void)setButtonTextColor:(UIColor *)textColor;
+
+// getter methods
+- (UIImage *)getButtonImage;
 
 // Animation fade in and out
 - (void)fadeButtonIn;
