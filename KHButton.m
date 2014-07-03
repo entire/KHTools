@@ -201,6 +201,7 @@
 - (void)setButtonFont:(NSString *)font withSize:(float)size {
     
     self.button.titleLabel.font = [UIFont fontWithName:font size:size];
+
 }
 
 - (void)setCornerRadius:(float)cornerRadius {
